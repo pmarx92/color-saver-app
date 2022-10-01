@@ -1,0 +1,23 @@
+.form {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border: 0;
+}
+fieldset > p {
+    margin-top: 15px;
+}
+fieldset {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+fieldset > input {
+    width: 74%;
+    margin: 15px auto;
+}
+fieldset > button {
+    width: 50%;
+    margin: 0 auto;
+}

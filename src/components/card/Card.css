@@ -1,0 +1,34 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+
+  margin: 2rem auto;
+  background-color: red;
+}
+.card-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 150px;
+  border: 2px solid red;
+}
+.card-color {
+  padding: 2px 17px;
+  color: black;
+}
+.deleteButton {
+  padding: 3px;
+}
+.card-position--absolute {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.card-content-submitBtn {
+  padding: 2px;
+
+}
