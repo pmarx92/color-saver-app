@@ -37,9 +37,12 @@ function App() {
     saveToLocal('hexCodes', hexCodes)
   }, [hexCodes])
 
-  const deleteCard = (id) => {
-    setHexCodes(hexCodes.filter((color) => color.id !== id));
-    console.log("help")
+  const removeCard = (id) => {
+    const removeColor = [...hexCodes].filter(hexCode => hexCode.id !== id)
+
+    setHexCodes(removeColor);
+/*     setHexCodes(hexCodes.filter((color) => color.id !== id));
+    console.log("help") */
   }
 
   const addNewCard = (newColor) => {
@@ -55,7 +58,7 @@ function App() {
       <Form addNewCard={addNewCard} />
       <main className='main'>
         {hexCodes.map((hexcode) => (
-          <Card key={hexcode.id} color={hexcode.color} deleteCard={deleteCard}/>
+          <Card key={hexcode.id} color={hexcode.color} removeCard={() => removeCard(hexcode.id)}/>
         ))}
       </main>
     </div>
