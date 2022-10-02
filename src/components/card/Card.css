@@ -5,7 +5,6 @@
   justify-content: center;
   gap: 5px;
   margin: 2rem auto;
-
 }
 .card-content {
   display: flex;
@@ -22,6 +21,9 @@
 }
 .deleteButton {
   padding: 3px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px grey;
+  border:0;
 }
 .card-position--absolute {
   position: absolute;
@@ -29,6 +31,6 @@
   right: 15px;
 }
 .card-content-submitBtn {
-  padding: 2px;
+  padding: 4px;
 
 }
