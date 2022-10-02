@@ -43,9 +43,15 @@ function App() {
     setHexCodes(removeColor);
   }
 
+  const editCard = (id, newHex, event) => {
+    event.stopPropagation();
+    setHexCodes(hexCodes.map((hexCode) => hexCode.id === id ? { ...hexCode, color: newHex } : hexCode))
+
+    console.log("App: " + id + " " + newHex);
+  }
+
   const addNewCard = (newColor) => {
     setHexCodes([...hexCodes, { id: nanoid(), color: newColor }]);
-    console.log(newColor);
   }
 
 
@@ -55,8 +61,8 @@ function App() {
       <Header />
       <Form addNewCard={addNewCard} />
       <main className='main'>
-        {hexCodes.map((hexcode) => (
-          <Card key={hexcode.id} color={hexcode.color} removeCard={() => removeCard(hexcode.id)} />
+        {hexCodes.map((hexCode) => (
+          <Card key={hexCode.id} id={hexCode.id} color={hexCode.color} removeCard={() => removeCard(hexCode.id)} editCard={editCard} />
         ))}
       </main>
     </div>

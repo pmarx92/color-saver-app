@@ -6,16 +6,11 @@ export default function Form({ addNewCard }) {
     const [hex, setHex] = useState("");
     let color = "#" + ("00000" + Math.floor(Math.random() * Math.pow(16, 6)).toString(16)).slice(-6);
 
-    const handleChange = e => {
-        setHex(e.target.value);
-    }
 
     const handleForm = e => {
         e.preventDefault();
         const form = e.target;
         const { hexColor } = form.elements;
-
-        console.log(hexColor.value);
         addNewCard(hexColor.value);
 
         form.reset();
