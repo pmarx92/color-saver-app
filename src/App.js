@@ -41,8 +41,6 @@ function App() {
     const removeColor = [...hexCodes].filter(hexCode => hexCode.id !== id)
 
     setHexCodes(removeColor);
-/*     setHexCodes(hexCodes.filter((color) => color.id !== id));
-    console.log("help") */
   }
 
   const addNewCard = (newColor) => {
@@ -58,7 +56,7 @@ function App() {
       <Form addNewCard={addNewCard} />
       <main className='main'>
         {hexCodes.map((hexcode) => (
-          <Card key={hexcode.id} color={hexcode.color} removeCard={() => removeCard(hexcode.id)}/>
+          <Card key={hexcode.id} color={hexcode.color} removeCard={() => removeCard(hexcode.id)} />
         ))}
       </main>
     </div>
