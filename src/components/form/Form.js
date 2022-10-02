@@ -17,9 +17,9 @@ export default function Form({ addNewCard }) {
     }
 
     return (
-        <div >
-            <form style={{ backgroundColor: color }} onSubmit={handleForm}>
-                <fieldset>
+       
+            <form onSubmit={handleForm}>
+                <fieldset style={{ backgroundColor: color }}>
                     <h2>Choose your Color</h2>
                     <p>{color}</p>
 
@@ -27,9 +27,8 @@ export default function Form({ addNewCard }) {
                     <input type="text" name="hexColor" id="hexColor" placeholder='Add a Hex Code'></input>
 
                 </fieldset>
-                <button type="submit">Submit</button>
+                <button type="submit">Add Color</button>
             </form>
 
-        </div>
     );
 }

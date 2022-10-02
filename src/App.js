@@ -10,23 +10,28 @@ import { nanoid } from 'nanoid';
 const colors = [
   {
     id: nanoid(),
-    color: '#A7F2E4'
+    color: '#A7F2E4',
+    colorName: 'I dont know'
   },
   {
     id: nanoid(),
-    color: '#01261C'
+    color: '#01261C',
+    colorName: 'I dont know'
   },
   {
     id: nanoid(),
-    color: '#4ABF2A'
+    color: '#4ABF2A',
+    colorName: 'I dont know'
   },
   {
     id: nanoid(),
-    color: '#98D936'
+    color: '#98D936',
+    colorName: 'I dont know'
   },
   {
     id: nanoid(),
-    color: '#F2ECE4'
+    color: '#F2ECE4',
+    colorName: 'I dont know'
   }
 ];
 
@@ -36,6 +41,8 @@ function App() {
   useEffect(() => {
     saveToLocal('hexCodes', hexCodes)
   }, [hexCodes])
+
+
 
   const removeCard = (id) => {
     const removeColor = [...hexCodes].filter(hexCode => hexCode.id !== id)
