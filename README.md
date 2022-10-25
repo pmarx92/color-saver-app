@@ -5,4 +5,4 @@ Diese Karte kann ich editieren (wird erst nach einem refresh angezeigt - bug). I
 
 Auch nach einem neu laden der Seite werden die ausgewählten Farben weiterhin angezeigt, da diese im local storage gespeichert werden.
 
-https://color-saver-app-six.vercel.app/
+Preview: https://color-saver-app-six.vercel.app/
